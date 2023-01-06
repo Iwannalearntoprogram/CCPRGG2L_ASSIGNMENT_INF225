@@ -1,0 +1,43 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Java program to check if a student number is valid
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter student number: ");
+        String studentNum = scan.nextLine();
+
+        // Long method
+        Pattern pattern = Pattern.compile("\\w+[A-Za-z]@students.national-u.edu.ph");
+        Matcher matcher = pattern.matcher(studentNum);
+
+        boolean match = matcher.matches();
+
+        if (match) {
+            System.out.println("valid student number");
+        } else {
+            System.out.println("invalid student number");
+        }
+        
+        System.out.print("Enter Cellphone number: ");
+        String studentNum2 = scan.nextLine();
+
+        // Long method
+        Pattern patty = Pattern.compile("09\\d{9}");
+        Matcher matchy = patty.matcher(studentNum2);
+
+        boolean match2 = matchy.matches();
+
+        if (match2) {
+            System.out.println("valid student number");
+        } else {
+            System.out.println("invalid student number");
+        }
+        
+
+  
+    }
+}
