@@ -20,7 +20,7 @@ public class exercise1 {
         String website = scan.nextLine();
 
         // Provide regex pattern
-        pattern = Pattern.compile("^www.+[A-Za-z].com$");
+        pattern = Pattern.compile("www.\\w.com");
 
         match = pattern.matcher(website);
 
@@ -41,7 +41,7 @@ public class exercise1 {
         String time = scan.nextLine();
 
         // Provide regex pattern
-        pattern = Pattern.compile("[1][0-9]|2[0-9]:[0-9][0-9]:[0-9][0-9]");
+        pattern = Pattern.compile("2[0-2][0-3]:[0-5][0-9]:[0-5][0-9]");
 
         match = pattern.matcher(time);
 
@@ -67,7 +67,7 @@ public class exercise1 {
         String myfiles = "myfile.txt, thesis.xlsx, this is not a file, picture.jpg, selfie.png";
 
         // Provide regex pattern
-        pattern = Pattern.compile("^[A-Za-z]+\\.(jpg|png|xlsx|txt)");
+        pattern = Pattern.compile("\\w+.(jpg|png|xlsx|txt)");
         match = pattern.matcher(myfiles);
 
         boolean found = false;
@@ -93,7 +93,7 @@ public class exercise1 {
         String password = scan.nextLine();
 
         // Provide the pattern
-        pattern = Pattern.compile("(?=.*[A-Za-z])(?=.*\d)(?=.*\W)[^ELIZR].{10}$");
+        pattern = Pattern.compile("(?=.*\\W)[^ELIZR]{10}");
 
         match = pattern.matcher(password);
 
@@ -113,7 +113,7 @@ public class exercise1 {
         // Make all phone numbers uniform by making them all start with +63
 
         // Provide the regex pattern
-        phonenumbers = phonenumbers.replaceAll("09", "+63");
+        phonenumbers = phonenumbers.replaceAll(regex:\\b replacement:"+63");
 
         System.out.println(phonenumbers);
 
