@@ -4,7 +4,9 @@ public class Weapon{
     int damage;
     String rarity;
 
-
+public void yeet(){
+    System.out.println("Your Sword is " + name);
+}
 
 public void AddDmg(int additionaldmg){
     int newdmg=this.damage+additionaldmg;
