@@ -1,0 +1,34 @@
+import java.util.concurrent.ExecutionException;
+
+public class App {
+
+    public static void main(String [] args) throws Exception{
+
+        Person Me = new Person();
+
+        Me.setname("Carl Jay");
+        String myName= Me.getname();
+
+        System.out.println("My name is " + myName);
+
+        Me.setccnumber(96564646);
+
+        int myccnumber= Me.getccnumber();
+
+        System.out.println("My cc number is " + myccnumber);
+
+
+        //================================================
+
+        Son me = new Son();
+
+        System.out.println("my surname is "+ me.Surname);
+        me.showLove();
+        
+
+    }
+
+        
+
+        
+}
